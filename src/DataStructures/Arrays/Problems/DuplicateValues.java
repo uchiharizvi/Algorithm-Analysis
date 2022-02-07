@@ -1,4 +1,4 @@
-package Arrays.Problems;
+package DataStructures.Arrays.Problems;
 
 public class DuplicateValues {
     public static void main(String[] args) {

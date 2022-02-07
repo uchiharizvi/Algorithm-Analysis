@@ -1,6 +1,6 @@
-package Arrays;
+package DataStructures.Arrays;
 
-import Utility.RandomIntGenerator;
+import DataStructures.Utility.RandomIntGenerator;
 
 import java.util.Scanner;
 

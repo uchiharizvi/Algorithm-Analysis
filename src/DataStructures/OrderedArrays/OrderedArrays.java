@@ -1,4 +1,4 @@
-package OrderedArrays;
+package DataStructures.OrderedArrays;
 
 import java.util.Arrays;
 
