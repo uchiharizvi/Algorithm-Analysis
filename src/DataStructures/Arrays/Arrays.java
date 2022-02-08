@@ -108,4 +108,25 @@ public class Arrays {
         }
         return arr;
     }
+
+    /**
+     * Algorithm : Quick Sort
+     **/
+    public static int[] sort_quick(int[] arr) {
+        int left = 0, right = arr.length - 1;
+        quickSort(left, right);
+        return arr;
+    }
+
+    private static void quickSort(int left, int right) {
+        int pivot = 0;
+        if (right - left <= 0) return;//base case
+        pivot = partition(left, right);
+        quickSort(left, pivot - 1);
+        quickSort(pivot + 1, right);
+    }
+
+    private static int partition(int left, int right) {
+        return 0;
+    }
 }

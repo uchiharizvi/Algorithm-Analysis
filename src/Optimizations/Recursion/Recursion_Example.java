@@ -1,4 +1,4 @@
-package Optimizations;
+package Optimizations.Recursion;
 
 public class Recursion_Example {
     public static void main(String[] args) {
