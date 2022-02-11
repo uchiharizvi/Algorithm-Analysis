@@ -114,19 +114,32 @@ public class Arrays {
      **/
     public static int[] sort_quick(int[] arr) {
         int left = 0, right = arr.length - 1;
-        quickSort(left, right);
+        quickSort(arr, left, right);
         return arr;
     }
 
-    private static void quickSort(int left, int right) {
-        int pivot = 0;
-        if (right - left <= 0) return;//base case
-        pivot = partition(left, right);
-        quickSort(left, pivot - 1);
-        quickSort(pivot + 1, right);
+    private static void quickSort(int[] arr, int left, int right) {
+
+        if (left < right) {
+            int pivot = partition(arr, left, right);
+            quickSort(arr, left, pivot - 1);
+            quickSort(arr, pivot + 1, right);
+        }
     }
 
-    private static int partition(int left, int right) {
-        return 0;
+    private static int partition(int[] arr, int left, int right) {
+        int pivot = arr[right];
+        int i = (left - 1);
+        for (int j = left; j <= right - 1; j++) {
+            if (arr[j] < pivot) {
+                i++;
+                swap(arr, i, j);
+            }
+        }
+        swap(arr, i + 1, right);
+        return (i + 1);
+    }
+
+    private static void swap(int[] arr, int i, int j) {
     }
 }
